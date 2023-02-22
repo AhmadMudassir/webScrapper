@@ -5,7 +5,13 @@ const app = express();
 const { Parser } = require('json2csv');
 const bodyParser = require('body-parser');
 const { remote } = require('webdriverio');
+const dotenv = require('dotenv');
 
+dotenv.config({
+    path: path.resolve('config.env'),
+});
+
+dotenv.config({ path: './config.js' })
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
 app.post('/example', (req, res) => {
@@ -112,8 +118,8 @@ app.post('/example', (req, res) => {
 
 });
 
-const port = 8080;
+const PORT = process.env.PORT || 8080;
 
-app.listen(port, () => {
-    console.log(`Server running on port${port}`);
+app.listen(PORT, () => {
+    console.log(`Server running on port${PORT}`);
 });
