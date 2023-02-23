@@ -1,27 +1,18 @@
 {
-  "name": "nodescraper",
+  "name": "puresultscsv",
   "version": "1.0.0",
   "description": "",
-  "main": "sc.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon nodeScrapperServer.js",
-    "build": "node nodeScrapperServer.js"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.3.3",
-    "cheerio": "^1.0.0-rc.12",
-    "dotenv": "^16.0.3",
-    "elementtree": "^0.1.7",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "isomorphic-unfetch": "^4.0.2",
-    "json2csv": "*",
-    "jssoup": "^0.0.15",
-    "nodemon": "^2.0.20",
-    "pretty": "^2.0.0",
-    "selenium-webdriver": "^4.8.1",
     "webdriverio": "^8.3.10"
   }
 }
