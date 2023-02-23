@@ -26,7 +26,7 @@ window.onload = function () {
 
     const formData = new FormData(myForm); // create a new FormData object from the form data
     const data = new URLSearchParams(formData);
-    const url = 'http://localhost:8080/submit'; // get the API endpoint URL from the form action attribute
+    const url = 'http://172.105.41.37:8080/submit'; // get the API endpoint URL from the form action attribute
 
     fetch(url, {
       method: 'POST',
